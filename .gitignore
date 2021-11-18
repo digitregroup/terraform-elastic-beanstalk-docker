@@ -1,0 +1,7 @@
+# IntelliJ project files
+.idea
+*.iml
+
+# Terraform files
+/.terraform/
+/node_modules/
