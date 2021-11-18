@@ -167,7 +167,7 @@ resource "aws_iam_policy_attachment" "elastic-webtier-role-attach" {
 resource "aws_elastic_beanstalk_environment" "eb_env" {
   name                = "${var.service_name}-${var.env}"
   application         = var.service_name
-  # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html#concepts.platforms.nodejs
+  # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html#concepts.platforms.docker
   solution_stack_name = var.eb_solution_stack_name
 
   # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html
@@ -395,21 +395,7 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
     value     = var.notification_topic_arn
   }
 
-  # Node.js Platform Options
-  # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-specific.html#command-options-nodejs
-  setting {
-    namespace = "aws:elasticbeanstalk:container:nodejs"
-    name      = "NodeCommand"
-    value     = var.node_cmd
-  }
-
-  setting {
-    namespace = "aws:elasticbeanstalk:container:nodejs"
-    name      = "ProxyServer"
-    value     = var.proxy_server
-  }
-
-  # Run the AWS X-Ray daemon to relay trace information from your X-Ray integrated Node.js application.
+  # Run the AWS X-Ray daemon to relay trace information from your X-Ray integrated Docker application.
   setting {
     namespace = "aws:elasticbeanstalk:xray"
     name      = "XRayEnabled"
