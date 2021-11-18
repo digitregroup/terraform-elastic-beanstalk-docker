@@ -32,7 +32,7 @@ variable "env" {
 # Instance
 variable "eb_solution_stack_name" {
   type    = string
-  default = "64bit Amazon Linux 2018.03 v4.8.1 running Node.js"
+  default = "64bit Amazon Linux 2 v3.4.5 running Docker"
   description = "The Elastic Beanstalk solution stack name"
 }
 variable "instance_type" {
@@ -212,20 +212,6 @@ variable "as_upper_threshold" {
   type = string
   default = "6000000"
   description = "If the measurement is higher than this number for the breach duration, a trigger is fired."
-}
-
-# NodeJS
-# https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-specific.html#command-options-nodejs
-variable "node_cmd" {
-  type    = string
-  default = ""
-  description = "Command used to start the Node.js application."
-}
-
-variable "proxy_server" {
-  type    = string
-  default = "none"
-  description = "Specifies which web server should be used to proxy connections to Node.js."
 }
 
 variable "xray_enable" {
