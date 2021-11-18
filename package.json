@@ -1,7 +1,7 @@
 {
-  "name": "terraform-elastic-beanstalk-nodejs",
-  "version": "3.2.0",
-  "description": "Terraform script to setup AWS Elastic Beanstalk with a load-balanced or Single Instance NodeJS app.",
+  "name": "terraform-elastic-beanstalk-docker",
+  "version": "0.0.1",
+  "description": "Terraform script to setup AWS Elastic Beanstalk with a load-balanced or Single Instance Docker app.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digitregroup/terraform-elastic-beanstalk-nodejs.git"
+    "url": "git+https://github.com/digitregroup/terraform-elastic-beanstalk-docker.git"
   },
   "author": "[L0gIn] Basile Trujillo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BasileTrujillo/terraform-elastic-beanstalk-nodejs/issues"
+    "url": "https://github.com/BasileTrujillo/terraform-elastic-beanstalk-docker/issues"
   },
-  "homepage": "https://github.com/BasileTrujillo/terraform-elastic-beanstalk-nodejs#readme",
+  "homepage": "https://github.com/BasileTrujillo/terraform-elastic-beanstalk-docker#readme",
   "dependencies": {},
   "devDependencies": {
     "auto-changelog": "^1.11.0"
